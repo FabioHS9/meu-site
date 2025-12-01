@@ -20,62 +20,102 @@
     --fonte-corpo:'Montserrat';
 }
 body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../imagens/GUITAR\ 2.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
+    font-family: var(--fonte-corpo);
+   
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,8), rgba(0, 0, 0, 0.3)),
+    url("../imagens/GUITAR\ 2.jpg") center/cover no-repeat;
+  
+   display: block;
+   overflow-x: hidden;
+   opacity;
 }
 header {
-    height: 60vh;
-    background-image: url(../imagens/Capa1.jpg);
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0.280)), url(../imagens/Capa1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-     display: flex;
-    flex-direction: column;
-    justify-content: center; /* centraliza vertical */
-    align-items: center;     /* centraliza horizontal */
     text-align: center;
+    display: block;
+     
     padding: 20px;
 }
-header nav.externo{
-    margin-bottom: 0px;
+ 
+header::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.2);
+}
+menu#externos ul{
+    margin: -20px;
 }
 h1 {
-    color: white;
+    color: rgba(255, 255, 255, 0.858);
    font-family:var(--fonte-cabecalho);
-   font-size: 4.5em;
+   font-size: 3em;
    font-weight: bold;
    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.336);
-   margin: 0 0 20px;
+   margin: 68px 0 20px;
+   padding-top: 100px;
+   display: block;
+   margin: auto;
+}
+header > span#burguer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+     flex-direction: row;
+    justify-content: center; /* centraliza vertical */
+    align-items: center;     /* centraliza horizontal */
+    text-align: center; 
+    padding: 10px;
+    cursor: pointer;
+}
+span#burguer:hover{
+    background-color: white;
+    color: black;
+}
+menu{
+    display: none;
 }
 .redes{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
-    gap: 12px;
+    gap: 20px;
     filter: invert(1);
     
 }
-.externo > a{
-    font-family: var(--fonte-corpo);
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 15px;
-    margin-bottom: 10px;
-}
  
+menu > ul > li > a{
+      font-family: var(--fonte-corpo);
+    color: rgba(255, 255, 255, 0.834);
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    text-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.168);
+    
+}
+menu > ul > li > a:hover{
+  color: rgba(74, 124, 107, 0.781);
+  text-shadow: 0 0 6px rgba(127, 255, 212, 0.379);
+}
+
 article > p{
     background-color: white;
     font-family: var(--fonte-corpo);
     line-height: 1.6;
     font-size: 1.05rem;
     padding: 20px;
+    margin: 10px;
     border-radius: 12px;
     max-width: 600px;
     margin: 40px auto;
@@ -84,14 +124,14 @@ article > p{
  }
 
 img#fotoperfil{
-    height: 350px;
-    width: 350px;
+    height: 250px;
+    width: 250px;
     object-fit:cover;
     object-position: top;
     border-radius: 50%;
     display: block;
     margin: auto;
-    padding-top: 15px;
+    margin-top: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0,8); 
 }
  
@@ -120,7 +160,22 @@ footer > p{
 
 /* Notebook */
 @media (min-width: 1024px) {
-     
+     span#burguer{
+        display: block;
+     }
+     .redes{
+        display: inline;
+     }
 }
 
- 
+ @media screen and (min-width: 768px) {
+    span#burguer{
+        display:none;
+    }
+    menu{
+        display: block;
+    }
+    menu > ul > li{
+        display: inline-block;
+    }
+}
