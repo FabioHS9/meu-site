@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="estilos/mediquery.css">
 </head>
 <body onresize="mudouTamanho()">
-     <header>
-            <h1>F.Henrique</h1>
+     <header class="hero">
+        <button class="hamburguer" onclick="clickMenu()">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+
            
-            <nav class="redes">
-                    <a href="https://www.youtube.com/@f.h.santos8631" target="_blank"><img src="icones/youtube (3).png" alt=""></a>
-                    <a href="https://www.instagram.com/f_henrique___/" target="_blank"><img src="icones/instagram (3).png" alt=""></a>
-            </nav>
-            <span id="burguer" class="material-symbols-outlined"onclick="clickMenu()">menu</span>
+            <div class="hero-content">
+                <h1>F.Henrique</h1>
+                <nav class="redes">
+                        <a href="https://www.youtube.com/@f.h.santos8631" target="_blank"><img src="icones/youtube (3).png" alt=""></a>
+                        <a href="https://www.instagram.com/f_henrique___/" target="_blank"><img src="icones/instagram (3).png" alt=""></a>
+                </nav>
+            </div>
             <menu id="externos">
                 <ul>
                     <li><a href="galeria.html" target="_blank">Galeria</a></li>
