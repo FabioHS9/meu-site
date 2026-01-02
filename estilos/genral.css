@@ -44,7 +44,7 @@ header {
     justify-content: center;
     align-items: center;
      
-    padding: 20px;
+     
 }
  
 header::after{
@@ -64,14 +64,17 @@ h1 {
     color: rgba(255, 255, 255, 0.858);
    font-family:var(--fonte-cabecalho);
    font-size: 5em;
+    
    margin-bottom: 20px;
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.909);
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.909);
 }
 
 .redes{
+    size: 50px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    margin-top: -40px;
+    gap: 50px;
     filter: invert(1);
 }
 #externos{
@@ -144,41 +147,4 @@ footer > p{
     padding: 15px;
     color: white;
 }
- 
-@media screen and (min-width:768px) and (max-width:992px) {
-    .hero h1 {
-        font-size: 8em;
-    }
- 
-    .hamburguer{
-        display: none;
-    }
-    .hero-content{
-        flex-direction: row;
-        align-items: center;
-    }
-}
-@media screen and (min-width:992px) and (max-width:1200px){
-    h1{
-        font-size: 10em;
-    }
-    #externos{
-        display: inline-block;
-    }
-    .hamburguer{
-        display: none;
-    }
-}
-@media screen and (min-width:1200px) {
-    h1{
-        font-size: 10em;
-    }
-     #externos{
-        display: inline-block;
-    }
-    .hamburguer{
-        display: none;
-    }
-}
-
  

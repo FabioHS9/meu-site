@@ -1,0 +1,49 @@
+@media screen and (min-width:768px) and (max-width:992px) {
+    .hero h1 {
+        font-size: 8em;
+    }
+ 
+    .hamburguer{
+        display: none;
+    }
+    .hero-content{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media screen and (min-width:992px){
+    h1{
+        font-size: 10em;
+    }
+    menu#externos{
+       display: flex;
+        flex-direction: row;
+        padding-top: 40px;
+    }
+    .redes{
+        flex-direction: row;
+        gap: 24px;
+        justify-content: center;
+
+    }
+    .hamburguer{
+        display: none;
+    }
+}
+@media screen and (min-width:1200px) {
+    h1{
+        font-size: 10em;
+    }
+    .redes{
+        flex-direction: row;
+        gap: 24px;
+    }
+     menu#externos{
+        display: flex;
+        flex-direction: row;
+        padding-top: 40px;
+    }
+    .hamburguer{
+        display: none;
+    }
+}
