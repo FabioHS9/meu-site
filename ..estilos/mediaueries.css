@@ -16,9 +16,7 @@
         font-size: 10em;
     }
     menu#externos{
-       display: flex;
-        flex-direction: row;
-        padding-top: 40px;
+        display: inline-block;
     }
     .redes{
         flex-direction: row;
