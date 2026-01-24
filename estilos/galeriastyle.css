@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/*Mobile First*/
+
+@font-face{
+    font-family: 'Eyesome Script';
+    src: url(../fontes/Eyesome\ Script.otf);
+}
+@font-face{
+    font-family: 'Montserrat';
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+}
+:root{
+    --fonte-cabecalho:'Eyesome Script';
+    --fonte-corpo:'Montserrat';
+}
+
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+ body{
+    background-image: url(imagens/GUITAR\ 2.jpg);
+    
+   
+ }
+ body{
+    font-family: var(--fonte-corpo);
+   
+  background:
+    linear-gradient(to top, rgba(0,0,0,8), rgba(0, 0, 0, 0.433)),
+    url("../imagens/GUITAR\ 2.jpg") center/cover no-repeat;
+  
+   display: block;
+   overflow-x: hidden;
+   opacity:1;
+}
+h1{
+    font-family: var(--fonte-cabecalho);
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.725);
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+}
+.galeria{
+   column-count: 2;
+   column-gap: 12px;
+   padding: 16px;
+}
+.galeria img{
+    width: 100%;
+    margin-bottom: 12px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.back-home{
+     
+    bottom: 20px;
+    left: 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.back-home a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: var(--fonte-corpo);
+    font-weight: bold;
+    padding: 10px;
+}
+
